@@ -12,7 +12,7 @@ node('docker') {
         checkout scm
     }
 
-    if (!infra.isTrusted()) {
+    if (true /* !infra.isTrusted() */) {
         /* Outside of the trusted.ci environment, we're building and testing
          * the Dockerful in this repository, but not publishing to docker hub
          */
